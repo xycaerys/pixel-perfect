@@ -171,6 +171,44 @@ const Menu = () => {
             </motion.div>
           ))}
         </div>
+
+        {/* Pre-Order Section */}
+        <motion.div
+          className="mt-16 max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <div className="border-2 border-dashed border-gold/40 rounded-2xl p-8 bg-card/30">
+            <div className="text-center mb-8">
+              <h3 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">PRE-ORDER ONLY</h3>
+              <span className="inline-block px-4 py-1.5 bg-gold/20 border border-gold/40 rounded-full text-gold text-xs font-medium tracking-wide">
+                24 Hours Notice Required
+              </span>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-card/50 border border-muted/50 rounded-xl p-6 flex items-center justify-between hover:border-gold/40 transition-all duration-300">
+                <div>
+                  <p className="text-foreground font-serif text-xl font-semibold mb-1">Mutton Leg Mandi</p>
+                  <p className="text-muted-foreground text-sm font-light">Whole mutton leg slow cooked with aromatic spices. Pre-order required.</p>
+                </div>
+                <div className="text-right ml-4">
+                  <span className="text-gold font-serif text-2xl font-bold">$120</span>
+                </div>
+              </div>
+              <div className="bg-card/50 border border-muted/50 rounded-xl p-6 flex items-center justify-between hover:border-gold/40 transition-all duration-300">
+                <div>
+                  <p className="text-foreground font-serif text-xl font-semibold mb-1">Mutton Shoulder Mandi</p>
+                  <p className="text-muted-foreground text-sm font-light">Premium shoulder cut with traditional preparation. Pre-order required.</p>
+                </div>
+                <div className="text-right ml-4">
+                  <span className="text-gold font-serif text-2xl font-bold">$110</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
