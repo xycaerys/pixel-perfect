@@ -19,8 +19,7 @@ import halfChicken from "@/assets/half-chicken.png";
 import fullChicken from "@/assets/full-chicken.png";
 
 const Menu = () => {
-  const menuItems = [
-    // Singles
+  const singles = [
     {
       image: chickenMandiSingle,
       title: "Chicken Mandi Single",
@@ -57,7 +56,9 @@ const Menu = () => {
       rating: 4.8,
       isNew: true,
     },
-    // Plates (1-2 persons)
+  ];
+
+  const plates = [
     {
       image: chickenMandiPlate,
       title: "Chicken Mandi Plate",
@@ -93,7 +94,9 @@ const Menu = () => {
       price: "$55",
       rating: 4.9,
     },
-    // Family Plates
+  ];
+
+  const familyPlates = [
     {
       image: chickenMandiFamilyPlate,
       title: "Chicken Mandi Family Plate",
@@ -116,7 +119,9 @@ const Menu = () => {
       price: "$110",
       rating: 4.9,
     },
-    // Extras
+  ];
+
+  const extras = [
     {
       image: mixedSet,
       title: "Mixed Set",
@@ -140,6 +145,39 @@ const Menu = () => {
     },
   ];
 
+  const MenuSection = ({ title, subtitle, items }: { title: string; subtitle: string; items: typeof singles }) => (
+    <div className="mb-16">
+      <motion.div
+        className="mb-8"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+      >
+        <h3 className="font-serif text-2xl md:text-3xl font-semibold text-gold mb-2">{title}</h3>
+        <p className="text-muted-foreground text-sm font-light">{subtitle}</p>
+        <div className="h-px w-24 bg-gradient-to-r from-gold/60 to-transparent mt-3" />
+      </motion.div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {items.map((item, index) => (
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ 
+              duration: 0.5, 
+              delay: index * 0.05,
+              ease: [0.22, 1, 0.36, 1]
+            }}
+          >
+            <MenuCard {...item} />
+          </motion.div>
+        ))}
+      </div>
+    </div>
+  );
+
   return (
     <section className="py-24 royal-gradient arabian-pattern" id="menu">
       <div className="container px-4">
@@ -154,27 +192,34 @@ const Menu = () => {
             Discover the authentic flavors of Arabian cuisine with our signature dishes
           </p>
         </AnimatedSection>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {menuItems.map((item, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-50px" }}
-              transition={{ 
-                duration: 0.5, 
-                delay: index * 0.05,
-                ease: [0.22, 1, 0.36, 1]
-              }}
-            >
-              <MenuCard {...item} />
-            </motion.div>
-          ))}
-        </div>
+
+        <MenuSection 
+          title="Singles" 
+          subtitle="Perfect portion for one person" 
+          items={singles} 
+        />
+        
+        <MenuSection 
+          title="Plates" 
+          subtitle="Generous portions for 1-2 persons" 
+          items={plates} 
+        />
+        
+        <MenuSection 
+          title="Family Plates" 
+          subtitle="Perfect for sharing with family & friends" 
+          items={familyPlates} 
+        />
+        
+        <MenuSection 
+          title="Extras" 
+          subtitle="Add-ons and standalone items" 
+          items={extras} 
+        />
 
         {/* Pre-Order Section */}
         <motion.div
-          className="mt-16 max-w-4xl mx-auto"
+          className="mt-8 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-50px" }}
