@@ -21,10 +21,10 @@ const Footer = () => {
             <div>
               <img src={logo} alt="Mandi House Logo" className="w-28 mb-5" />
               <p className="text-foreground font-medium mb-2">
-                Authentic Arabian cuisine in an elegant setting.
+                Authentic Mandi Restaurant
               </p>
               <p className="text-muted-foreground text-sm font-light leading-relaxed mb-5">
-                Experience the true taste of Arabia.
+                Experience the true taste of Mandi.
               </p>
               <div className="flex gap-3">
                 <a 
