@@ -67,12 +67,14 @@ const Header = () => {
             ))}
           </ul>
 
-          <button
-            onClick={() => scrollToSection("contact")}
+          <a
+            href="https://www.ubereats.com/au/store/mandi-house-rockdale/i4yJhgNMT3iRGx0CQLQ3ag"
+            target="_blank"
+            rel="noopener noreferrer"
             className="bg-gold hover:bg-gold-light text-background font-semibold px-5 py-2 rounded-full text-sm transition-all duration-300 gold-glow"
           >
             Order Now
-          </button>
+          </a>
         </nav>
       </div>
     </motion.header>
