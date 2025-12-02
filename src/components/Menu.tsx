@@ -72,20 +72,20 @@ const Menu = () => {
   ];
 
   return (
-    <section className="py-20 bg-background" id="menu">
+    <section className="py-24 bg-background" id="menu">
       <div className="container px-4">
-        <div className="text-center mb-12">
-          <div className="inline-block mb-4 px-4 py-1 border border-gold/30 rounded-full">
-            <p className="text-gold text-sm font-medium">OUR SPECIALTIES</p>
+        <div className="text-center mb-16">
+          <div className="inline-block mb-5 px-5 py-1.5 border border-gold/40 rounded-full">
+            <p className="text-gold text-xs font-medium tracking-[0.1em] uppercase">Our Specialties</p>
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-5 text-foreground">
             Explore Our Mandi Menu
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto font-light text-lg">
             Discover the authentic flavors of Arabian cuisine with our signature dishes
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {menuItems.map((item, index) => (
             <MenuCard key={index} {...item} />
           ))}
