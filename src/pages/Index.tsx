@@ -5,18 +5,21 @@ import Extras from "@/components/Extras";
 import Tradition from "@/components/Tradition";
 import Testimonials from "@/components/Testimonials";
 import Footer from "@/components/Footer";
+import PageTransition from "@/components/PageTransition";
 
 const Index = () => {
   return (
-    <div className="min-h-screen arabic-calligraphy-bg">
-      <Header />
-      <Hero />
-      <Menu />
-      <Extras />
-      <Tradition />
-      <Testimonials />
-      <Footer />
-    </div>
+    <PageTransition>
+      <div className="min-h-screen arabic-calligraphy-bg">
+        <Header />
+        <Hero />
+        <Menu />
+        <Extras />
+        <Tradition />
+        <Testimonials />
+        <Footer />
+      </div>
+    </PageTransition>
   );
 };
 
