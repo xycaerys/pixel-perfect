@@ -1,75 +1,74 @@
 import { motion } from "framer-motion";
 import MenuCard from "./MenuCard";
 import AnimatedSection from "./AnimatedSection";
-import chickenMandi from "@/assets/chicken-mandi.jpg";
-import muttonMandi from "@/assets/mutton-mandi.jpg";
-import fishMandi from "@/assets/fish-mandi.jpg";
-import mixedGrill from "@/assets/mixed-grill.jpg";
-import biryani from "@/assets/biryani.jpg";
-import kabsa from "@/assets/kabsa.jpg";
-import prawnMandi from "@/assets/prawn-mandi.jpg";
-import lambChops from "@/assets/lamb-chops.jpg";
+import chickenMandiSingle from "@/assets/chicken-mandi-single.png";
+import mixedMandiSingle from "@/assets/mixed-mandi-single.png";
+import chickenMandiPlate from "@/assets/chicken-mandi-plate.png";
+import muttonMandiPlate from "@/assets/mutton-mandi-plate.png";
+import mixedMandiFamilyPlate from "@/assets/mixed-mandi-family-plate.png";
+import mixedSet from "@/assets/mixed-set.png";
+import halfChicken from "@/assets/half-chicken.png";
+import fullChicken from "@/assets/full-chicken.png";
 
 const Menu = () => {
   const menuItems = [
     {
-      image: chickenMandi,
-      title: "Chicken Mandi",
-      description: "Tender chicken pieces on fragrant yellow rice with aromatic spices",
-      price: "AED 45",
+      image: chickenMandiSingle,
+      title: "Chicken Mandi Single",
+      description: "Tender chicken marinated with aromatic spices, served on fragrant saffron rice. Serves 1 person.",
+      price: "$24",
+      rating: 4.9,
+    },
+    {
+      image: mixedMandiSingle,
+      title: "Mixed Mandi Single",
+      description: "A perfect combination of chicken and mutton with aromatic rice. Serves 1 person.",
+      price: "$35",
       rating: 4.8,
       isNew: true,
     },
     {
-      image: muttonMandi,
-      title: "Mutton Mandi",
-      description: "Slow-cooked mutton on saffron rice with pomegranate and herbs",
-      price: "AED 55",
+      image: chickenMandiPlate,
+      title: "Chicken Mandi Plate",
+      description: "Generous chicken portion with fragrant rice. Serves 1-2 persons.",
+      price: "$32",
       rating: 4.9,
     },
     {
-      image: fishMandi,
-      title: "Fish Mandi",
-      description: "Grilled fish fillet on yellow basmati rice with lemon",
-      price: "AED 50",
-      rating: 4.6,
-    },
-    {
-      image: mixedGrill,
-      title: "Mixed Grill",
-      description: "Assorted grilled meats with kebabs on aromatic rice",
-      price: "AED 65",
-      rating: 4.7,
-      isNew: true,
-    },
-    {
-      image: biryani,
-      title: "Biryani Special",
-      description: "Fragrant rice with spices, fried onions and fresh herbs",
-      price: "AED 40",
+      image: muttonMandiPlate,
+      title: "Mutton Mandi Plate",
+      description: "Premium mutton cuts with traditional rice preparation. Serves 1-2 persons.",
+      price: "$35",
       rating: 4.8,
     },
     {
-      image: kabsa,
-      title: "Kabsa Rice",
-      description: "Aromatic rice with whole spices, almonds and raisins",
-      price: "AED 42",
-      rating: 4.5,
-    },
-    {
-      image: prawnMandi,
-      title: "Prawn Mandi",
-      description: "Grilled prawns on saffron rice with fresh herbs",
-      price: "AED 58",
-      rating: 4.7,
-    },
-    {
-      image: lambChops,
-      title: "Lamb Chops",
-      description: "Grilled lamb chops with charred edges on rice",
-      price: "AED 70",
+      image: mixedMandiFamilyPlate,
+      title: "Mixed Mandi Family Plate",
+      description: "Chicken and mutton combination platter. Serves 2-3 persons.",
+      price: "$55",
       rating: 4.9,
       isNew: true,
+    },
+    {
+      image: mixedSet,
+      title: "Mixed Set",
+      description: "A delightful combination of our signature items.",
+      price: "$40",
+      rating: 4.9,
+    },
+    {
+      image: halfChicken,
+      title: "Half Chicken",
+      description: "Perfectly seasoned half chicken, slow cooked to perfection.",
+      price: "$16",
+      rating: 4.8,
+    },
+    {
+      image: fullChicken,
+      title: "Full Chicken",
+      description: "Whole chicken marinated in traditional spices.",
+      price: "$25",
+      rating: 4.9,
     },
   ];
 
