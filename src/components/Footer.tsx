@@ -31,8 +31,22 @@ const Footer = () => {
   return (
     <>
       {/* Contact Cards Section */}
-      <section className="py-16 bg-background arabian-pattern">
+      <section className="py-16 bg-background arabian-pattern" id="contact">
         <div className="container px-4">
+          <motion.div
+            className="text-center mb-12"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
+            <div className="inline-block mb-5 px-5 py-1.5 border border-gold/40 rounded-full">
+              <p className="text-gold text-xs font-medium tracking-[0.1em] uppercase">Get In Touch</p>
+            </div>
+            <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-5 text-foreground royal-text-shadow">
+              Contact Us
+            </h2>
+          </motion.div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             {contactCards.map((card, index) => {
               const Icon = card.icon;
