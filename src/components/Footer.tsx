@@ -98,7 +98,9 @@ const Footer = () => {
                   <Facebook className="w-5 h-5 text-gold" />
                 </a>
                 <a 
-                  href="#" 
+                  href="https://www.instagram.com/mandihouserockdale/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="bg-muted/50 p-3 rounded-full hover:bg-gold/20 hover:scale-110 transition-all duration-200 border border-gold/30"
                   aria-label="Instagram"
                 >

@@ -67,12 +67,18 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
         >
-          <Button 
-            size="lg" 
-            className="bg-gold hover:bg-gold-light text-background font-semibold px-10 py-6 text-base gold-glow transition-all duration-300"
+          <a 
+            href="https://www.ubereats.com/au/store/mandi-house-rockdale/i4yJhgNMT3iRGx0CQLQ3ag"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            Order Now
-          </Button>
+            <Button 
+              size="lg" 
+              className="bg-gold hover:bg-gold-light text-background font-semibold px-10 py-6 text-base gold-glow transition-all duration-300"
+            >
+              Order Now
+            </Button>
+          </a>
         </motion.div>
         <motion.div 
           className="mt-12"
