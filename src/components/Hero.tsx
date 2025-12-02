@@ -46,7 +46,7 @@ const Hero = () => {
           <p className="text-gold text-sm font-medium tracking-[0.15em]">AUTHENTIC ARABIAN CUISINE</p>
         </motion.div>
         <motion.h1 
-          className="font-serif text-[clamp(3rem,8vw,5rem)] font-bold mb-6 leading-[1.1] text-foreground royal-text-shadow"
+          className="font-serif text-[clamp(3rem,8vw,5rem)] font-bold mb-2 leading-[1.1] text-foreground royal-text-shadow"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
@@ -54,6 +54,14 @@ const Hero = () => {
           Welcome to<br />
           <span className="text-gold gold-shimmer">Mandi House</span>
         </motion.h1>
+        <motion.p
+          className="text-gold/70 text-sm tracking-[0.2em] font-light italic mb-6"
+          initial={{ opacity: 0, y: 10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+        >
+          Sydney, Rockdale
+        </motion.p>
         <motion.p 
           className="font-light text-lg md:text-xl mb-10 max-w-[600px] mx-auto leading-relaxed text-muted-foreground"
           initial={{ opacity: 0, y: 20 }}
