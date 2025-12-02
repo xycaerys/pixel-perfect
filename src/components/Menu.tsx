@@ -2,14 +2,17 @@ import { motion } from "framer-motion";
 import MenuCard from "./MenuCard";
 import AnimatedSection from "./AnimatedSection";
 import chickenMandiSingle from "@/assets/chicken-mandi-single.png";
+import muttonMandiSingle from "@/assets/mutton-mandi-single.png";
 import fishMandiSingle from "@/assets/fish-mandi-single.png";
 import chickenTikkaMandiSingle from "@/assets/chicken-tikka-mandi-single.png";
 import mixedMandiSingle from "@/assets/mixed-mandi-single.png";
 import chickenMandiPlate from "@/assets/chicken-mandi-plate.png";
+import muttonMandiPlate from "@/assets/mutton-mandi-plate.png";
 import fishMandiPlate from "@/assets/fish-mandi-plate.png";
 import chickenTikkaMandiPlate from "@/assets/chicken-tikka-mandi-plate.png";
 import mixedMandiPlate from "@/assets/mixed-mandi-plate.png";
 import chickenMandiFamilyPlate from "@/assets/chicken-mandi-family-plate.png";
+import muttonMandiFamilyPlate from "@/assets/mutton-mandi-family-plate.png";
 import mixedMandiFamilyPlate from "@/assets/mixed-mandi-family-plate.png";
 import mixedSet from "@/assets/mixed-set.png";
 import halfChicken from "@/assets/half-chicken.png";
@@ -23,6 +26,13 @@ const Menu = () => {
       description: "(Serves 1 Person) Comes With Rice, Quarter Chicken, Sauces And Salad",
       price: "$24",
       rating: 4.9,
+    },
+    {
+      image: muttonMandiSingle,
+      title: "Mutton Mandi Single",
+      description: "(Serves 1 Person) Comes With Rice, 1 Lamb Shank, Sauces And Salad",
+      price: "$25",
+      rating: 5,
     },
     {
       image: fishMandiSingle,
@@ -41,8 +51,8 @@ const Menu = () => {
     {
       image: mixedMandiSingle,
       title: "Mixed Mandi Single",
-      description: "(Serves 1 Person) Comes With Rice, Quarter Chicken, Half Boneless Fish Piece, Sauces And Salad",
-      price: "$30",
+      description: "(Serves 1 Person) Comes With Rice, Quarter Chicken, 2 Mutton Pieces, Half Boneless Fish Piece, Sauces And Salad",
+      price: "$35",
       rating: 4.9,
       isNew: true,
     },
@@ -55,6 +65,13 @@ const Menu = () => {
       description: "(Serves 1-2 Person) Comes With Rice, Half Chicken, Sauces And Salad",
       price: "$32",
       rating: 5,
+    },
+    {
+      image: muttonMandiPlate,
+      title: "Mutton Mandi Plate",
+      description: "(Serves 1-2 Person) Comes With Rice, 1 Lamb Shank, 1 Mutton Piece, Sauces And Salad",
+      price: "$35",
+      rating: 4.9,
     },
     {
       image: fishMandiPlate,
@@ -73,8 +90,8 @@ const Menu = () => {
     {
       image: mixedMandiPlate,
       title: "Mixed Mandi Plate",
-      description: "(Serves 2 Person) Comes With Rice, Half Chicken, 1 Piece Boneless Fish Fillet, Sauces And Salad",
-      price: "$45",
+      description: "(Serves 2 Person) Comes With Rice, 1 Lamb Shank, Half Chicken, 1 Piece Boneless Fish Fillet, Sauces And Salad",
+      price: "$55",
       rating: 5,
     },
   ];
@@ -89,10 +106,17 @@ const Menu = () => {
       isNew: true,
     },
     {
+      image: muttonMandiFamilyPlate,
+      title: "Mutton Mandi Family Plate",
+      description: "(Serves 4-5 Persons) Comes With Rice, 3 Lamb Shanks And 3 Mutton Pieces, Sauces, Salad And 1 Soft Drink Bottle 1.25L",
+      price: "$90",
+      rating: 4.9,
+    },
+    {
       image: mixedMandiFamilyPlate,
       title: "Mixed Mandi Family Plate",
-      description: "(Serves 4-5 Persons) Comes With Rice, 1 Full Chicken, 2 Pieces Of Boneless Fish Fillets, Sauces And Salad",
-      price: "$95",
+      description: "(Serves 4-5 Persons) Comes With Rice, 1 Full Chicken, 1 Lamb Shank And 2 Mutton Pieces, 2 Pieces Of Boneless Fish Fillets, Sauces And Salad",
+      price: "$110",
       rating: 5,
     },
   ];
@@ -101,21 +125,21 @@ const Menu = () => {
     {
       image: mixedSet,
       title: "Mixed Set",
-      description: "Comes With Half Chicken, 1 Boneless Fish Fillet, Sauces And Salad",
-      price: "$35",
+      description: "Comes With 1 Lamb Shank, Half Chicken, 1 Boneless Fish Fillet, Sauces And Salad",
+      price: "$40",
       rating: 5,
     },
     {
       image: halfChicken,
       title: "Half Chicken",
-      description: "Grilled half chicken with traditional Hyderabadi spices",
+      description: "Grilled half chicken with traditional spices",
       price: "$16",
       rating: 4.9,
     },
     {
       image: fullChicken,
       title: "Full Chicken",
-      description: "Grilled full chicken with traditional Hyderabadi spices",
+      description: "Grilled full chicken with traditional spices",
       price: "$25",
       rating: 5,
     },
@@ -165,7 +189,7 @@ const Menu = () => {
             Explore Our Mandi Menu
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-light text-lg">
-            Discover the authentic flavors of Hyderabadi & Arabian cuisine with our signature Mandi dishes
+            Discover the authentic flavors of Arabian cuisine with our signature dishes
           </p>
         </AnimatedSection>
 
@@ -192,6 +216,44 @@ const Menu = () => {
           subtitle="Add-ons and standalone items" 
           items={extras} 
         />
+
+        {/* Pre-Order Section */}
+        <motion.div
+          className="mt-8 max-w-4xl mx-auto"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          <div className="border-2 border-dashed border-gold/40 rounded-2xl p-8 bg-card/30">
+            <div className="text-center mb-8">
+              <h3 className="font-serif text-2xl md:text-3xl font-semibold text-foreground mb-3">PRE-ORDER ONLY</h3>
+              <span className="inline-block px-4 py-1.5 bg-gold/20 border border-gold/40 rounded-full text-gold text-xs font-medium tracking-wide">
+                24 Hours Notice Required
+              </span>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-card/50 border border-muted/50 rounded-xl p-6 flex items-center justify-between hover:border-gold/40 transition-all duration-300">
+                <div>
+                  <p className="text-foreground font-serif text-xl font-semibold mb-1">Mutton Leg Mandi</p>
+                  <p className="text-muted-foreground text-sm font-light">Whole mutton leg slow cooked with aromatic spices. Pre-order required.</p>
+                </div>
+                <div className="text-right ml-4">
+                  <span className="text-gold font-serif text-2xl font-bold">$120</span>
+                </div>
+              </div>
+              <div className="bg-card/50 border border-muted/50 rounded-xl p-6 flex items-center justify-between hover:border-gold/40 transition-all duration-300">
+                <div>
+                  <p className="text-foreground font-serif text-xl font-semibold mb-1">Mutton Shoulder Mandi</p>
+                  <p className="text-muted-foreground text-sm font-light">Premium shoulder cut with traditional preparation. Pre-order required.</p>
+                </div>
+                <div className="text-right ml-4">
+                  <span className="text-gold font-serif text-2xl font-bold">$110</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
