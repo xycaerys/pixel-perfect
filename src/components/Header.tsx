@@ -51,7 +51,7 @@ const Header = () => {
               className="w-10 h-10 md:w-12 md:h-12"
             />
             <span className="font-serif text-xl md:text-2xl font-semibold text-foreground">
-              Mandi House
+              Mandi House Rockdale
             </span>
             <img
               src={halalLogo}
