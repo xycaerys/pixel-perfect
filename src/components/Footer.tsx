@@ -6,9 +6,10 @@ import ArabianDivider from "./ArabianDivider";
 const Footer = () => {
   const contactCards = [
     {
-      icon: MapPin,
-      title: "Visit Us",
-      details: ["548 Princes Hwy, Rockdale NSW"],
+      icon: Clock,
+      title: "Opening Hours",
+      details: ["Tue-Thu: 4:00 PM - 11:00 PM", "Fri-Sun: 5:00 PM - 12:00 AM", "Monday: Closed"],
+      highlight: "Monday: Closed",
     },
     {
       icon: Phone,
@@ -16,15 +17,14 @@ const Footer = () => {
       details: ["+61 416 775 785", "Tel: 0279017587"],
     },
     {
+      icon: MapPin,
+      title: "Visit Us",
+      details: ["548 Princes Hwy, Rockdale NSW"],
+    },
+    {
       icon: Mail,
       title: "Email Us",
       details: ["mandihouserockdale@gmail.com"],
-    },
-    {
-      icon: Clock,
-      title: "Opening Hours",
-      details: ["Tue-Thu: 4:00 PM - 11:00 PM", "Fri-Sun: 5:00 PM - 12:00 AM", "Monday: Closed"],
-      highlight: "Monday: Closed",
     },
   ];
 
