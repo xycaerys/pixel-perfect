@@ -4,7 +4,6 @@ import Menu from "@/components/Menu";
 import Extras from "@/components/Extras";
 import Tradition from "@/components/Tradition";
 import Testimonials from "@/components/Testimonials";
-import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -16,7 +15,6 @@ const Index = () => {
       <Extras />
       <Tradition />
       <Testimonials />
-      <Contact />
       <Footer />
     </div>
   );

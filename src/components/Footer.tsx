@@ -43,16 +43,16 @@ const Footer = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="bg-card border border-muted rounded-2xl p-8 text-center hover:border-gold/30 transition-all duration-300"
+                  className="bg-card border border-muted rounded-2xl p-6 md:p-8 text-center hover:border-gold/30 transition-all duration-300"
                 >
-                  <div className="bg-gold w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-5">
-                    <Icon className="w-7 h-7 text-background" />
+                  <div className="bg-gold w-14 h-14 md:w-16 md:h-16 rounded-full flex items-center justify-center mx-auto mb-4 md:mb-5">
+                    <Icon className="w-6 h-6 md:w-7 md:h-7 text-background" />
                   </div>
-                  <h3 className="font-serif font-semibold text-xl mb-4 text-foreground">{card.title}</h3>
+                  <h3 className="font-serif font-semibold text-lg md:text-xl mb-3 md:mb-4 text-foreground">{card.title}</h3>
                   {card.details.map((detail, detailIndex) => (
                     <p 
                       key={detailIndex} 
-                      className={`text-sm font-light ${
+                      className={`text-xs md:text-sm font-light break-words ${
                         card.highlight && detail === card.highlight 
                           ? "text-gold font-medium mt-1" 
                           : "text-muted-foreground"
