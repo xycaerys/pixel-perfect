@@ -22,14 +22,14 @@ const Tradition = () => {
   ];
 
   return (
-    <section className="py-24 bg-primary">
+    <section className="py-24 royal-gradient-alt arabian-pattern">
       <div className="container px-4">
         <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
           <AnimatedSection>
             <div className="inline-block mb-5 px-5 py-1.5 border border-gold/40 rounded-full">
               <p className="text-gold text-xs font-medium tracking-[0.1em] uppercase">Our Story</p>
             </div>
-            <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-6 leading-[1.1] text-foreground">
+            <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-6 leading-[1.1] text-foreground royal-text-shadow">
               A Tradition of Authentic<br />
               <span className="text-gold">Arabian Flavors</span>
             </h2>
@@ -69,12 +69,17 @@ const Tradition = () => {
             </div>
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
-            <div className="relative aspect-square bg-card rounded-2xl overflow-hidden border border-muted">
+            <div className="relative aspect-square bg-card rounded-2xl overflow-hidden border border-muted ornamental-corners">
               <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-gold/5" />
+              <div className="absolute inset-0 arabian-pattern opacity-50" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
-                  <p className="font-serif text-6xl md:text-8xl font-bold text-gold/20">MH</p>
-                  <p className="text-muted-foreground text-sm tracking-[0.2em] uppercase mt-2">Est. 2020</p>
+                  <p className="font-serif text-6xl md:text-8xl font-bold text-gold/30 royal-text-shadow">MH</p>
+                  <div className="flex items-center justify-center gap-2 mt-4">
+                    <span className="text-gold/40 text-xs">✦</span>
+                    <p className="text-muted-foreground text-sm tracking-[0.2em] uppercase">Est. 2020</p>
+                    <span className="text-gold/40 text-xs">✦</span>
+                  </div>
                 </div>
               </div>
             </div>

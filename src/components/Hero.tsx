@@ -2,12 +2,32 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
+import ArabianDivider from "./ArabianDivider";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-background px-4 py-24">
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,hsl(165_38%_12%_/_0.4),transparent_50%)]" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,hsl(42_62%_58%_/_0.05),transparent_50%)]" />
+    <section className="relative min-h-screen flex items-center justify-center royal-gradient arabian-pattern px-4 py-24 overflow-hidden">
+      {/* Decorative corner elements */}
+      <div className="absolute top-20 left-8 w-32 h-32 border-l-2 border-t-2 border-gold/20 hidden lg:block" />
+      <div className="absolute top-20 right-8 w-32 h-32 border-r-2 border-t-2 border-gold/20 hidden lg:block" />
+      <div className="absolute bottom-8 left-8 w-32 h-32 border-l-2 border-b-2 border-gold/20 hidden lg:block" />
+      <div className="absolute bottom-8 right-8 w-32 h-32 border-r-2 border-b-2 border-gold/20 hidden lg:block" />
+      
+      {/* Floating ornaments */}
+      <motion.div 
+        className="absolute top-1/4 left-[10%] text-gold/20 text-4xl hidden md:block"
+        animate={{ y: [0, -10, 0], rotate: [0, 5, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+      >
+        ✦
+      </motion.div>
+      <motion.div 
+        className="absolute bottom-1/3 right-[10%] text-gold/20 text-3xl hidden md:block"
+        animate={{ y: [0, 10, 0], rotate: [0, -5, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+      >
+        ❖
+      </motion.div>
       <div className="container max-w-4xl text-center relative z-10">
         <motion.img 
           src={logo} 
@@ -26,13 +46,13 @@ const Hero = () => {
           <p className="text-gold text-sm font-medium tracking-[0.15em]">AUTHENTIC ARABIAN CUISINE</p>
         </motion.div>
         <motion.h1 
-          className="font-serif text-[clamp(3rem,8vw,5rem)] font-bold mb-6 leading-[1.1] text-foreground"
+          className="font-serif text-[clamp(3rem,8vw,5rem)] font-bold mb-6 leading-[1.1] text-foreground royal-text-shadow"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
           Welcome to<br />
-          <span className="text-gold">Mandi House</span>
+          <span className="text-gold gold-shimmer">Mandi House</span>
         </motion.h1>
         <motion.p 
           className="font-light text-lg md:text-xl mb-10 max-w-[600px] mx-auto leading-relaxed text-muted-foreground"
@@ -55,7 +75,15 @@ const Hero = () => {
           </Button>
         </motion.div>
         <motion.div 
-          className="mt-16"
+          className="mt-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.7 }}
+        >
+          <ArabianDivider />
+        </motion.div>
+        <motion.div 
+          className="mt-8"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.8 }}

@@ -28,13 +28,13 @@ const Contact = () => {
   ];
 
   return (
-    <section className="py-24 bg-primary" id="contact">
+    <section className="py-24 royal-gradient-alt arabian-pattern" id="contact">
       <div className="container px-4">
         <AnimatedSection className="text-center mb-16">
           <div className="inline-block mb-5 px-5 py-1.5 border border-gold/40 rounded-full">
             <p className="text-gold text-xs font-medium tracking-[0.1em] uppercase">Get In Touch</p>
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-5 text-foreground">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-5 text-foreground royal-text-shadow">
             Contact Us
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-light text-lg">
