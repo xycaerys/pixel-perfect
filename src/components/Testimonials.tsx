@@ -30,33 +30,36 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-primary" id="testimonials">
+    <section className="py-24 bg-background" id="testimonials">
       <div className="container px-4">
-        <div className="text-center mb-12">
-          <div className="inline-block mb-4 px-4 py-1 border border-gold/30 rounded-full">
-            <p className="text-gold text-sm font-medium">TESTIMONIALS</p>
+        <div className="text-center mb-16">
+          <div className="inline-block mb-5 px-5 py-1.5 border border-gold/40 rounded-full">
+            <p className="text-gold text-xs font-medium tracking-[0.1em] uppercase">Testimonials</p>
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-5 text-foreground">
             What Our Customers Say
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto font-light text-lg">
             Don't just take our word for it - hear from our satisfied customers
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-card border-border p-6 hover:shadow-lg transition-shadow">
-              <div className="flex gap-1 mb-4">
+            <Card 
+              key={index} 
+              className="bg-card border border-muted rounded-2xl p-8 hover:shadow-[0_8px_30px_hsl(165_40%_5%_/_0.4)] transition-all duration-300"
+            >
+              <div className="flex gap-1 mb-5">
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star key={i} className="w-4 h-4 fill-gold text-gold" />
                 ))}
               </div>
-              <p className="text-card-foreground mb-4 leading-relaxed">
+              <p className="font-serif text-foreground mb-6 leading-relaxed italic text-lg">
                 "{testimonial.comment}"
               </p>
-              <div className="border-t border-border pt-4">
-                <p className="font-semibold text-card-foreground">{testimonial.name}</p>
-                <p className="text-sm text-muted-foreground">{testimonial.role}</p>
+              <div className="border-t border-muted pt-5">
+                <p className="font-medium text-gold">{testimonial.name}</p>
+                <p className="text-sm text-muted-foreground font-light">{testimonial.role}</p>
               </div>
             </Card>
           ))}

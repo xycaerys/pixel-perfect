@@ -65,8 +65,8 @@ export default {
         cream: "hsl(var(--cream))",
       },
       fontFamily: {
-        serif: ["Playfair Display", "serif"],
-        sans: ["Inter", "sans-serif"],
+        serif: ["Cormorant Garamond", "serif"],
+        sans: ["Outfit", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",

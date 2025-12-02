@@ -26,16 +26,16 @@ const Contact = () => {
   ];
 
   return (
-    <section className="py-20 bg-background" id="contact">
+    <section className="py-24 bg-primary" id="contact">
       <div className="container px-4">
-        <div className="text-center mb-12">
-          <div className="inline-block mb-4 px-4 py-1 border border-gold/30 rounded-full">
-            <p className="text-gold text-sm font-medium">GET IN TOUCH</p>
+        <div className="text-center mb-16">
+          <div className="inline-block mb-5 px-5 py-1.5 border border-gold/40 rounded-full">
+            <p className="text-gold text-xs font-medium tracking-[0.1em] uppercase">Get In Touch</p>
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-5 text-foreground">
             Contact Us
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-muted-foreground max-w-2xl mx-auto font-light text-lg">
             Visit us, call us, or send us a message. We're here to serve you!
           </p>
         </div>
@@ -45,14 +45,14 @@ const Contact = () => {
             return (
               <div
                 key={index}
-                className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow"
+                className="bg-card border border-muted rounded-2xl p-8 text-center hover:shadow-[0_8px_30px_hsl(165_40%_5%_/_0.4)] transition-all duration-300"
               >
-                <div className="bg-gold/10 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
+                <div className="bg-gold/10 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5">
                   <Icon className="w-6 h-6 text-gold" />
                 </div>
-                <h3 className="font-semibold text-lg mb-3 text-card-foreground">{info.title}</h3>
+                <h3 className="font-serif font-semibold text-xl mb-4 text-foreground">{info.title}</h3>
                 {info.details.map((detail, detailIndex) => (
-                  <p key={detailIndex} className="text-muted-foreground text-sm">
+                  <p key={detailIndex} className="text-muted-foreground text-sm font-light">
                     {detail}
                   </p>
                 ))}
@@ -60,8 +60,11 @@ const Contact = () => {
             );
           })}
         </div>
-        <div className="text-center mt-12">
-          <Button size="lg" className="bg-gold hover:bg-gold/90 text-dark-green font-semibold px-8">
+        <div className="text-center mt-14">
+          <Button 
+            size="lg" 
+            className="bg-gold hover:bg-gold-light text-background font-semibold px-10 py-6 text-base gold-glow transition-all duration-300"
+          >
             Make a Reservation
           </Button>
         </div>

@@ -57,13 +57,13 @@ const Extras = () => {
   ];
 
   return (
-    <section className="py-20 bg-primary" id="extras">
+    <section className="py-24 bg-primary" id="extras">
       <div className="container px-4">
-        <div className="text-center mb-12">
-          <div className="inline-block mb-4 px-4 py-1 border border-gold/30 rounded-full">
-            <p className="text-gold text-sm font-medium">CUSTOMIZE YOUR MEAL</p>
+        <div className="text-center mb-16">
+          <div className="inline-block mb-5 px-5 py-1.5 border border-gold/40 rounded-full">
+            <p className="text-gold text-xs font-medium tracking-[0.1em] uppercase">Customize Your Meal</p>
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-5 text-foreground">
             Extras & Add-ons
           </h2>
         </div>
@@ -71,16 +71,19 @@ const Extras = () => {
           {extrasCategories.map((category, index) => (
             <div
               key={index}
-              className="bg-card border border-border rounded-lg p-6 hover:shadow-lg transition-shadow"
+              className="bg-card border border-muted rounded-2xl p-6 hover:shadow-[0_8px_30px_hsl(165_40%_5%_/_0.4)] transition-all duration-300"
             >
-              <h3 className="text-gold font-semibold text-lg mb-4 uppercase tracking-wide">
+              <h3 className="text-gold font-medium text-xs mb-5 uppercase tracking-[0.1em]">
                 {category.title}
               </h3>
               <div className="space-y-3">
                 {category.items.map((item, itemIndex) => (
-                  <div key={itemIndex} className="flex justify-between items-center">
-                    <span className="text-card-foreground">{item.name}</span>
-                    <span className="text-gold font-semibold">{item.price}</span>
+                  <div 
+                    key={itemIndex} 
+                    className="flex justify-between items-center py-2 border-b border-muted/30 last:border-0"
+                  >
+                    <span className="text-foreground font-light">{item.name}</span>
+                    <span className="text-gold font-serif font-medium">{item.price}</span>
                   </div>
                 ))}
               </div>
