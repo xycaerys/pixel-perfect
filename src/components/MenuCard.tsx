@@ -25,8 +25,8 @@ const MenuCard = ({ image, title, description, price, rating = 4.9 }: MenuCardPr
       </div>
       <div className="p-3 md:p-5 relative flex-1 flex flex-col">
         <div className="absolute top-0 left-3 right-3 md:left-5 md:right-5 h-px bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
-        <h3 className="font-serif text-base md:text-xl font-semibold mb-1 md:mb-2 text-foreground group-hover:text-gold transition-colors line-clamp-2">{title}</h3>
-        <p className="text-muted-foreground text-xs md:text-sm mb-3 md:mb-4 line-clamp-2 font-light leading-relaxed flex-1">{description}</p>
+        <h3 className="font-serif text-base md:text-xl font-semibold mb-1 md:mb-2 text-foreground group-hover:text-gold transition-colors">{title}</h3>
+        <p className="text-muted-foreground text-xs md:text-sm mb-3 md:mb-4 font-light leading-relaxed flex-1">{description}</p>
         <div className="flex items-center justify-center">
           <span className="font-serif text-gold text-lg md:text-2xl font-semibold">{price}</span>
         </div>
