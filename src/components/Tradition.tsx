@@ -1,6 +1,7 @@
 import { Award, Clock, Users } from "lucide-react";
 import { motion } from "framer-motion";
 import AnimatedSection from "./AnimatedSection";
+import restaurantInterior from "@/assets/restaurant-interior.jpg";
 
 const Tradition = () => {
   const features = [
@@ -70,18 +71,12 @@ const Tradition = () => {
           </AnimatedSection>
           <AnimatedSection delay={0.2}>
             <div className="relative aspect-square bg-card rounded-2xl overflow-hidden border border-muted ornamental-corners">
-              <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-gold/5" />
-              <div className="absolute inset-0 arabian-pattern opacity-50" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <p className="font-serif text-6xl md:text-8xl font-bold text-gold/30 royal-text-shadow">MH</p>
-                  <div className="flex items-center justify-center gap-2 mt-4">
-                    <span className="text-gold/40 text-xs">✦</span>
-                    <p className="text-muted-foreground text-sm tracking-[0.2em] uppercase">Est. 2020</p>
-                    <span className="text-gold/40 text-xs">✦</span>
-                  </div>
-                </div>
-              </div>
+              <img 
+                src={restaurantInterior} 
+                alt="Mandi House restaurant interior with elegant blue and gold decor" 
+                className="w-full h-full object-cover"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-transparent" />
             </div>
           </AnimatedSection>
         </div>
