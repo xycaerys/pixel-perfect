@@ -63,18 +63,31 @@ const Footer = () => {
                     <Icon className="w-6 h-6 md:w-7 md:h-7 text-background" />
                   </div>
                   <h3 className="font-serif font-semibold text-lg md:text-xl mb-3 md:mb-4 text-foreground">{card.title}</h3>
-                  {card.details.map((detail, detailIndex) => (
-                    <p 
-                      key={detailIndex} 
-                      className={`text-xs md:text-sm font-light break-words ${
-                        card.highlight && detail === card.highlight 
-                          ? "text-gold font-medium mt-1" 
-                          : "text-muted-foreground"
-                      }`}
-                    >
-                      {detail}
-                    </p>
-                  ))}
+                  {card.details.map((detail, detailIndex) => {
+                    const isPhone = detail.match(/^\+?\d[\d\s-]+$/) || detail.startsWith("Tel:");
+                    const phoneNumber = detail.replace(/[^\d+]/g, '');
+                    
+                    return isPhone ? (
+                      <a 
+                        key={detailIndex}
+                        href={`tel:${phoneNumber}`}
+                        className={`block text-sm md:text-base font-light break-words text-muted-foreground hover:text-gold transition-colors`}
+                      >
+                        {detail}
+                      </a>
+                    ) : (
+                      <p 
+                        key={detailIndex} 
+                        className={`text-sm md:text-base font-light break-words ${
+                          card.highlight && detail === card.highlight 
+                            ? "text-gold font-medium mt-1" 
+                            : "text-muted-foreground"
+                        }`}
+                      >
+                        {detail}
+                      </p>
+                    );
+                  })}
                 </motion.div>
               );
             })}
@@ -151,11 +164,23 @@ const Footer = () => {
             {/* Contact Info */}
             <div>
               <h4 className="font-serif font-semibold text-lg mb-5 text-gold">Contact Info</h4>
-              <ul className="space-y-3 text-sm font-light">
+              <ul className="space-y-3 text-base md:text-sm font-light">
                 <li className="text-muted-foreground">548 Princes Hwy, Rockdale NSW</li>
-                <li className="text-muted-foreground">+61 416 775 785</li>
-                <li className="text-muted-foreground">Telephone: 0279017587</li>
-                <li className="text-muted-foreground">mandihouserockdale@gmail.com</li>
+                <li>
+                  <a href="tel:+61416775785" className="text-muted-foreground hover:text-gold transition-colors">
+                    +61 416 775 785
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:0279017587" className="text-muted-foreground hover:text-gold transition-colors">
+                    Telephone: 0279017587
+                  </a>
+                </li>
+                <li>
+                  <a href="mailto:mandihouserockdale@gmail.com" className="text-muted-foreground hover:text-gold transition-colors">
+                    mandihouserockdale@gmail.com
+                  </a>
+                </li>
               </ul>
             </div>
 
