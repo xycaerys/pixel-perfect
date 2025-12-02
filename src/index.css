@@ -139,10 +139,10 @@
     content: '';
     position: absolute;
     inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 400 400'%3E%3Cg fill='%23000000' fill-opacity='0.04'%3E%3Ctext x='20' y='60' font-family='serif' font-size='48' transform='rotate(-15 20 60)'%3Eبسم الله%3C/text%3E%3Ctext x='200' y='120' font-family='serif' font-size='36' transform='rotate(10 200 120)'%3Eالرحمن%3C/text%3E%3Ctext x='80' y='200' font-family='serif' font-size='42' transform='rotate(-8 80 200)'%3Eالرحيم%3C/text%3E%3Ctext x='250' y='280' font-family='serif' font-size='38' transform='rotate(12 250 280)'%3Eمنزل%3C/text%3E%3Ctext x='50' y='340' font-family='serif' font-size='44' transform='rotate(-5 50 340)'%3Eمندي%3C/text%3E%3Ctext x='280' y='380' font-family='serif' font-size='32' transform='rotate(8 280 380)'%3Eطعام%3C/text%3E%3C/g%3E%3C/svg%3E");
-    background-size: 400px 400px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='600' viewBox='0 0 600 600'%3E%3Cg fill='%23000000' fill-opacity='0.12'%3E%3Ctext x='30' y='80' font-family='Arial' font-size='72' font-weight='bold' transform='rotate(-12 30 80)'%3Eبسم الله%3C/text%3E%3Ctext x='350' y='150' font-family='Arial' font-size='56' font-weight='bold' transform='rotate(8 350 150)'%3Eالرحمن%3C/text%3E%3Ctext x='100' y='280' font-family='Arial' font-size='64' font-weight='bold' transform='rotate(-6 100 280)'%3Eالرحيم%3C/text%3E%3Ctext x='380' y='380' font-family='Arial' font-size='58' font-weight='bold' transform='rotate(10 380 380)'%3Eمنزل%3C/text%3E%3Ctext x='60' y='480' font-family='Arial' font-size='68' font-weight='bold' transform='rotate(-8 60 480)'%3Eمندي%3C/text%3E%3Ctext x='400' y='550' font-family='Arial' font-size='52' font-weight='bold' transform='rotate(5 400 550)'%3Eطعام%3C/text%3E%3C/g%3E%3C/svg%3E");
+    background-size: 600px 600px;
     pointer-events: none;
-    z-index: 0;
+    z-index: 1;
   }
 
   /* Royal ornamental border */

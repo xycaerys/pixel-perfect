@@ -6,7 +6,7 @@ import ArabianDivider from "./ArabianDivider";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center royal-gradient arabian-pattern px-4 py-24 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center royal-gradient arabian-pattern arabic-calligraphy-bg px-4 py-24 overflow-hidden">
       {/* Decorative corner elements */}
       <div className="absolute top-20 left-8 w-32 h-32 border-l-2 border-t-2 border-gold/20 hidden lg:block" />
       <div className="absolute top-20 right-8 w-32 h-32 border-r-2 border-t-2 border-gold/20 hidden lg:block" />
