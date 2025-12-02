@@ -1,17 +1,20 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
+import ArabianDivider from "./ArabianDivider";
 
 const Footer = () => {
   return (
     <motion.footer 
-      className="bg-card border-t border-muted py-14"
+      className="bg-card border-t border-gold/20 py-14 relative overflow-hidden"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <div className="container px-4">
+      <div className="absolute inset-0 arabian-pattern opacity-30" />
+      <div className="container px-4 relative z-10">
+        <ArabianDivider className="mb-10" />
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
           <div>
             <img src={logo} alt="Mandi House Logo" className="w-28 mb-5" />
@@ -63,7 +66,12 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="border-t border-muted pt-8 text-center">
+        <div className="border-t border-gold/20 pt-8 text-center">
+          <div className="flex items-center justify-center gap-2 mb-3">
+            <span className="text-gold/40 text-xs">✦</span>
+            <span className="text-gold/40 text-xs">✦</span>
+            <span className="text-gold/40 text-xs">✦</span>
+          </div>
           <p className="text-muted-foreground text-xs font-light">
             &copy; {new Date().getFullYear()} Mandi House. All rights reserved.
           </p>

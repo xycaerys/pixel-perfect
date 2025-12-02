@@ -123,4 +123,122 @@
     background: linear-gradient(to bottom, transparent 60%, hsl(165 40% 9% / 0.6));
     pointer-events: none;
   }
+
+  /* Arabian geometric pattern overlay */
+  .arabian-pattern {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0L60 30L30 60L0 30z' fill='none' stroke='%23c9a95c' stroke-opacity='0.05' stroke-width='1'/%3E%3Cpath d='M30 10L50 30L30 50L10 30z' fill='none' stroke='%23c9a95c' stroke-opacity='0.03' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 60px 60px;
+  }
+
+  /* Royal ornamental border */
+  .royal-border {
+    border: 1px solid hsl(42 62% 58% / 0.3);
+    position: relative;
+  }
+
+  .royal-border::before,
+  .royal-border::after {
+    content: '✦';
+    position: absolute;
+    color: hsl(42 62% 58%);
+    font-size: 10px;
+  }
+
+  .royal-border::before {
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .royal-border::after {
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  /* Shimmer animation for gold elements */
+  .gold-shimmer {
+    background: linear-gradient(
+      110deg,
+      hsl(42 62% 58%) 0%,
+      hsl(45 70% 70%) 40%,
+      hsl(42 62% 58%) 60%,
+      hsl(45 70% 70%) 100%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 3s ease-in-out infinite;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  @keyframes shimmer {
+    0% { background-position: 100% 0; }
+    100% { background-position: -100% 0; }
+  }
+
+  /* Luxury gradient backgrounds */
+  .royal-gradient {
+    background: radial-gradient(ellipse at 30% 0%, hsl(165 38% 15% / 0.8) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 100%, hsl(42 62% 58% / 0.05) 0%, transparent 50%),
+                hsl(var(--background));
+  }
+
+  .royal-gradient-alt {
+    background: radial-gradient(ellipse at 70% 0%, hsl(165 38% 18% / 0.8) 0%, transparent 50%),
+                radial-gradient(ellipse at 30% 100%, hsl(42 62% 58% / 0.05) 0%, transparent 50%),
+                hsl(var(--primary));
+  }
+
+  /* Ornamental corner decorations */
+  .ornamental-corners {
+    position: relative;
+  }
+
+  .ornamental-corners::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    border-top: 2px solid hsl(42 62% 58% / 0.4);
+    border-left: 2px solid hsl(42 62% 58% / 0.4);
+  }
+
+  .ornamental-corners::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    border-bottom: 2px solid hsl(42 62% 58% / 0.4);
+    border-right: 2px solid hsl(42 62% 58% / 0.4);
+  }
+
+  /* Premium text shadow for headings */
+  .royal-text-shadow {
+    text-shadow: 0 2px 20px hsl(42 62% 58% / 0.3);
+  }
+
+  /* Elegant underline for links */
+  .royal-underline {
+    position: relative;
+  }
+
+  .royal-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(42 62% 58%), transparent);
+    transition: width 0.3s ease;
+  }
+
+  .royal-underline:hover::after {
+    width: 100%;
+  }
 }
