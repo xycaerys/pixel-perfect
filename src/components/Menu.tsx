@@ -1,4 +1,6 @@
+import { motion } from "framer-motion";
 import MenuCard from "./MenuCard";
+import AnimatedSection from "./AnimatedSection";
 import chickenMandi from "@/assets/chicken-mandi.jpg";
 import muttonMandi from "@/assets/mutton-mandi.jpg";
 import fishMandi from "@/assets/fish-mandi.jpg";
@@ -74,7 +76,7 @@ const Menu = () => {
   return (
     <section className="py-24 bg-background" id="menu">
       <div className="container px-4">
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <div className="inline-block mb-5 px-5 py-1.5 border border-gold/40 rounded-full">
             <p className="text-gold text-xs font-medium tracking-[0.1em] uppercase">Our Specialties</p>
           </div>
@@ -84,10 +86,22 @@ const Menu = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto font-light text-lg">
             Discover the authentic flavors of Arabian cuisine with our signature dishes
           </p>
-        </div>
+        </AnimatedSection>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {menuItems.map((item, index) => (
-            <MenuCard key={index} {...item} />
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ 
+                duration: 0.5, 
+                delay: index * 0.1,
+                ease: [0.22, 1, 0.36, 1]
+              }}
+            >
+              <MenuCard {...item} />
+            </motion.div>
           ))}
         </div>
       </div>

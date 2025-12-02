@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { motion } from "framer-motion";
+import AnimatedSection from "./AnimatedSection";
 
 const Contact = () => {
   const contactInfo = [
@@ -28,7 +30,7 @@ const Contact = () => {
   return (
     <section className="py-24 bg-primary" id="contact">
       <div className="container px-4">
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <div className="inline-block mb-5 px-5 py-1.5 border border-gold/40 rounded-full">
             <p className="text-gold text-xs font-medium tracking-[0.1em] uppercase">Get In Touch</p>
           </div>
@@ -38,13 +40,21 @@ const Contact = () => {
           <p className="text-muted-foreground max-w-2xl mx-auto font-light text-lg">
             Visit us, call us, or send us a message. We're here to serve you!
           </p>
-        </div>
+        </AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
           {contactInfo.map((info, index) => {
             const Icon = info.icon;
             return (
-              <div
+              <motion.div
                 key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: index * 0.1,
+                  ease: [0.22, 1, 0.36, 1]
+                }}
                 className="bg-card border border-muted rounded-2xl p-8 text-center hover:shadow-[0_8px_30px_hsl(165_40%_5%_/_0.4)] transition-all duration-300"
               >
                 <div className="bg-gold/10 w-14 h-14 rounded-full flex items-center justify-center mx-auto mb-5">
@@ -56,18 +66,18 @@ const Contact = () => {
                     {detail}
                   </p>
                 ))}
-              </div>
+              </motion.div>
             );
           })}
         </div>
-        <div className="text-center mt-14">
+        <AnimatedSection className="text-center mt-14" delay={0.3}>
           <Button 
             size="lg" 
             className="bg-gold hover:bg-gold-light text-background font-semibold px-10 py-6 text-base gold-glow transition-all duration-300"
           >
             Make a Reservation
           </Button>
-        </div>
+        </AnimatedSection>
       </div>
     </section>
   );

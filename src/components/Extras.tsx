@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+import AnimatedSection from "./AnimatedSection";
+
 const Extras = () => {
   const extrasCategories = [
     {
@@ -59,18 +62,26 @@ const Extras = () => {
   return (
     <section className="py-24 bg-primary" id="extras">
       <div className="container px-4">
-        <div className="text-center mb-16">
+        <AnimatedSection className="text-center mb-16">
           <div className="inline-block mb-5 px-5 py-1.5 border border-gold/40 rounded-full">
             <p className="text-gold text-xs font-medium tracking-[0.1em] uppercase">Customize Your Meal</p>
           </div>
           <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-5 text-foreground">
             Extras & Add-ons
           </h2>
-        </div>
+        </AnimatedSection>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {extrasCategories.map((category, index) => (
-            <div
+            <motion.div
               key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ 
+                duration: 0.5, 
+                delay: index * 0.08,
+                ease: [0.22, 1, 0.36, 1]
+              }}
               className="bg-card border border-muted rounded-2xl p-6 hover:shadow-[0_8px_30px_hsl(165_40%_5%_/_0.4)] transition-all duration-300"
             >
               <h3 className="text-gold font-medium text-xs mb-5 uppercase tracking-[0.1em]">
@@ -87,7 +98,7 @@ const Extras = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

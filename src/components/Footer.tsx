@@ -1,9 +1,16 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
-    <footer className="bg-card border-t border-muted py-14">
+    <motion.footer 
+      className="bg-card border-t border-muted py-14"
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+    >
       <div className="container px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
           <div>
@@ -62,7 +69,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

@@ -1,4 +1,6 @@
 import { Award, Clock, Users } from "lucide-react";
+import { motion } from "framer-motion";
+import AnimatedSection from "./AnimatedSection";
 
 const Tradition = () => {
   const features = [
@@ -23,7 +25,7 @@ const Tradition = () => {
     <section className="py-24 bg-primary">
       <div className="container px-4">
         <div className="grid md:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-          <div>
+          <AnimatedSection>
             <div className="inline-block mb-5 px-5 py-1.5 border border-gold/40 rounded-full">
               <p className="text-gold text-xs font-medium tracking-[0.1em] uppercase">Our Story</p>
             </div>
@@ -42,7 +44,18 @@ const Tradition = () => {
               {features.map((feature, index) => {
                 const Icon = feature.icon;
                 return (
-                  <div key={index} className="flex gap-5 items-start">
+                  <motion.div 
+                    key={index} 
+                    className="flex gap-5 items-start"
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ 
+                      duration: 0.5, 
+                      delay: 0.2 + index * 0.1,
+                      ease: [0.22, 1, 0.36, 1]
+                    }}
+                  >
                     <div className="bg-gold/10 p-3.5 rounded-xl">
                       <Icon className="w-6 h-6 text-gold" />
                     </div>
@@ -50,13 +63,13 @@ const Tradition = () => {
                       <h3 className="font-serif font-semibold text-xl mb-1.5 text-foreground">{feature.title}</h3>
                       <p className="text-muted-foreground font-light">{feature.description}</p>
                     </div>
-                  </div>
+                  </motion.div>
                 );
               })}
             </div>
-          </div>
-          <div className="relative">
-            <div className="aspect-square bg-card rounded-2xl overflow-hidden border border-muted">
+          </AnimatedSection>
+          <AnimatedSection delay={0.2}>
+            <div className="relative aspect-square bg-card rounded-2xl overflow-hidden border border-muted">
               <div className="absolute inset-0 bg-gradient-to-br from-gold/10 via-transparent to-gold/5" />
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
@@ -65,7 +78,7 @@ const Tradition = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </div>
     </section>
