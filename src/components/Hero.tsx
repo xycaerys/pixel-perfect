@@ -1,11 +1,13 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-background px-4 py-20">
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(69,91,75,0.2),transparent_50%)]" />
       <div className="container max-w-4xl text-center relative z-10">
+        <img src={logo} alt="Mandi House Logo" className="w-40 md:w-52 mx-auto mb-6" />
         <div className="inline-block mb-4 px-4 py-1 border border-gold/30 rounded-full">
           <p className="text-gold text-sm font-medium">AUTHENTIC ARABIAN CUISINE</p>
         </div>

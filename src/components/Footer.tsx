@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Twitter } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -6,7 +7,7 @@ const Footer = () => {
       <div className="container px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="font-serif text-2xl font-bold text-gold mb-4">Mandi House</h3>
+            <img src={logo} alt="Mandi House Logo" className="w-28 mb-4" />
             <p className="text-muted-foreground text-sm">
               Bringing authentic Arabian flavors to your table since 2020.
             </p>
