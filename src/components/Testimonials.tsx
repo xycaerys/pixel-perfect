@@ -6,28 +6,28 @@ import AnimatedSection from "./AnimatedSection";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Ahmed Hassan",
-      role: "Food Blogger",
-      rating: 5,
-      comment: "The best mandi I've had outside of Yemen! The meat is incredibly tender and the rice is perfectly seasoned. Highly recommended!",
-    },
-    {
-      name: "Sarah Williams",
+      name: "Mohamad I.",
       role: "Customer",
       rating: 5,
-      comment: "Amazing experience! The open kitchen concept is great, and watching the chefs prepare the food adds to the authenticity. Will definitely come back.",
+      comment: "Very generous meal, beautiful taste. I recommend!",
     },
     {
-      name: "Mohammed Ali",
-      role: "Regular Customer",
+      name: "Alex P.",
+      role: "Customer",
       rating: 5,
-      comment: "This place reminds me of home. The flavors are authentic and the portions are generous. Perfect for family dinners!",
+      comment: "LAMB MANDI WAS DELICIOUS AND JUICY",
     },
     {
-      name: "Emily Chen",
-      role: "Tourist",
+      name: "Ashraf Khan A.",
+      role: "Customer",
       rating: 5,
-      comment: "Discovered this gem while visiting Dubai. The staff is friendly and the food is exceptional. A must-visit for anyone who loves Arabian cuisine!",
+      comment: "Amazing food, fast delivery, fantastic packaging. Just love their food.",
+    },
+    {
+      name: "Mustafa Ahmed ali",
+      role: "Customer",
+      rating: 5,
+      comment: "Really great food, I'd recommend everyone to visit this restaurant and taste the real Hyderabadi and Arabian cuisine",
     },
   ];
 
@@ -35,17 +35,17 @@ const Testimonials = () => {
     <section className="py-24 royal-gradient arabian-pattern" id="testimonials">
       <div className="container px-4">
         <AnimatedSection className="text-center mb-16">
-          <div className="inline-block mb-5 px-5 py-1.5 border border-gold/40 rounded-full">
-            <p className="text-gold text-xs font-medium tracking-[0.1em] uppercase">Testimonials</p>
+          <div className="inline-block mb-5 px-5 py-1.5 bg-gold/20 border border-gold/40 rounded-full">
+            <p className="text-gold text-xs font-medium tracking-[0.1em] uppercase">Customer Reviews</p>
           </div>
-          <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-5 text-foreground royal-text-shadow">
+          <h2 className="font-serif text-4xl md:text-5xl font-semibold mb-5 text-foreground royal-text-shadow italic">
             What Our Customers Say
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto font-light text-lg">
             Don't just take our word for it - hear from our satisfied customers
           </p>
         </AnimatedSection>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={index}
@@ -58,17 +58,20 @@ const Testimonials = () => {
                 ease: [0.22, 1, 0.36, 1]
               }}
             >
-              <Card className="bg-card border border-muted rounded-2xl p-8 hover:shadow-[0_8px_30px_hsl(165_40%_5%_/_0.4)] transition-all duration-300 h-full">
-                <div className="flex gap-1 mb-5">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-gold text-gold" />
-                  ))}
+              <Card className="bg-card border border-muted rounded-2xl p-6 md:p-8 hover:border-gold/30 transition-all duration-300 h-full flex flex-col">
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex gap-1">
+                    {[...Array(testimonial.rating)].map((_, i) => (
+                      <Star key={i} className="w-4 h-4 fill-gold text-gold" />
+                    ))}
+                  </div>
+                  <span className="text-gold/40 font-serif text-4xl leading-none">"</span>
                 </div>
-                <p className="font-serif text-foreground mb-6 leading-relaxed italic text-lg">
+                <p className="text-foreground mb-6 leading-relaxed italic text-sm md:text-base flex-1">
                   "{testimonial.comment}"
                 </p>
-                <div className="border-t border-muted pt-5 mt-auto">
-                  <p className="font-medium text-gold">{testimonial.name}</p>
+                <div className="border-t border-muted pt-4 mt-auto">
+                  <p className="font-semibold text-gold">{testimonial.name}</p>
                   <p className="text-sm text-muted-foreground font-light">{testimonial.role}</p>
                 </div>
               </Card>
