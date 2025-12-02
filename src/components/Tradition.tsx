@@ -38,6 +38,8 @@ const Tradition = () => {
               At Mandi House, we bring the rich culinary heritage of Arabia to your table. 
               Our open kitchen concept allows you to witness the artistry behind each dish, 
               from the slow-cooked tender meats to the perfectly spiced aromatic rice. 
+              We proudly serve only <span className="text-gold font-medium">100% Halal and hand-slaughtered meat</span>, 
+              ensuring the highest quality and authenticity in every bite. 
               Every meal is a celebration of authentic flavors, traditional cooking methods, 
               and the warm hospitality that Arabian culture is known for.
             </p>

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo.png";
+import halalLogo from "@/assets/halal-logo.png";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -52,6 +53,11 @@ const Header = () => {
             <span className="font-serif text-xl md:text-2xl font-semibold text-foreground">
               Mandi House
             </span>
+            <img
+              src={halalLogo}
+              alt="Halal Certified"
+              className="w-8 h-8 md:w-10 md:h-10"
+            />
           </button>
 
           <ul className="hidden md:flex items-center gap-8">
