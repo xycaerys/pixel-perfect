@@ -158,7 +158,7 @@ const Menu = () => {
         <p className="text-muted-foreground text-sm font-light">{subtitle}</p>
         <div className="h-px w-24 bg-gradient-to-r from-gold/60 to-transparent mt-3" />
       </motion.div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-6">
         {items.map((item, index) => (
           <motion.div
             key={index}
