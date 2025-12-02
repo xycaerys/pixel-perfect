@@ -60,7 +60,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
-          We are an open kitchen, featuring the best Arabian cuisine of Mandi, Biryani, Kabsa, and Mutton Dishes. Visit us to taste the unique flavors and textures that our authentic cooking brings from traditional Arabian culture.
+          We are an open kitchen, featuring the best of Hyderabadi and Arabian cuisine. Our signature Mandi dishes are slow-cooked to perfection using traditional methods, bringing you the authentic flavors and rich textures that have been cherished for generations across the Arabian Peninsula.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
