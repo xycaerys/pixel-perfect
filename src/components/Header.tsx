@@ -50,8 +50,8 @@ const Header = () => {
               alt="Mandi House Logo"
               className="w-10 h-10 md:w-12 md:h-12"
             />
-            <span className="font-serif text-xl md:text-2xl font-semibold text-foreground">
-              Mandi House Rockdale
+            <span className="font-serif text-xl md:text-2xl font-semibold text-gold uppercase tracking-wider gold-shimmer drop-shadow-[0_0_10px_hsl(42_62%_58%_/_0.5)]">
+              MANDI HOUSE ROCKDALE
             </span>
             <img
               src={halalLogo}
