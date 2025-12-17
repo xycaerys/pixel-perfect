@@ -52,7 +52,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
           Welcome to<br />
-          <span className="text-gold gold-shimmer drop-shadow-[0_0_15px_hsl(42_62%_58%_/_0.5)]">MANDI HOUSE ROCKDALE</span>
+          <span className="text-gold gold-shimmer drop-shadow-[0_0_15px_hsl(42_62%_58%_/_0.5)]">MANDI HOUSE</span>
         </motion.h1>
         <motion.p
           className="text-gold/70 text-sm tracking-[0.2em] font-light italic mb-6"
@@ -60,7 +60,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
         >
-          Sydney, Rockdale
+          Rockdale, Sydney
         </motion.p>
         <motion.p 
           className="font-light text-lg md:text-xl mb-10 max-w-[600px] mx-auto leading-relaxed text-muted-foreground"
@@ -68,7 +68,7 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4, ease: [0.22, 1, 0.36, 1] }}
         >
-          We are an open kitchen, featuring the best of Hyderabadi and Arabian cuisine. Our signature Mandi dishes are slow-cooked to perfection using traditional methods, bringing you the authentic flavors and rich textures that have been cherished for generations across the Arabian Peninsula.
+          We are an open kitchen, featuring the best of Arabian cuisine. Our signature Mandi dishes are slow-cooked to perfection using traditional methods, bringing you the authentic flavors and rich textures that have been cherished for generations across the Arabian Peninsula.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
