@@ -67,14 +67,14 @@ const ContactSection = () => {
                     <a 
                       key={detailIndex}
                       href={`tel:${phoneNumber}`}
-                      className={`block text-sm md:text-base font-light break-words text-muted-foreground hover:text-gold transition-colors`}
+                      className={`block text-base md:text-lg font-light break-words text-muted-foreground hover:text-gold transition-colors`}
                     >
                       {detail}
                     </a>
                   ) : (
                     <p 
                       key={detailIndex} 
-                      className={`text-sm md:text-base font-light break-words ${
+                      className={`text-base md:text-lg font-light break-words ${
                         card.highlight && detail === card.highlight 
                           ? "text-gold font-medium mt-1" 
                           : "text-muted-foreground"
