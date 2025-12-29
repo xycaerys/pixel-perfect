@@ -6,8 +6,9 @@ const ContactSection = () => {
     {
       icon: Clock,
       title: "Opening Hours",
-      details: ["Tue-Thu: 4:00 PM - 12:00 AM", "Fri-Sun: 5:00 PM - 1:00 AM", "Monday: Closed", "Christmas & New Year's hours may vary"],
-      highlight: "Monday: Closed",
+      details: ["Tue-Thu: 4:00 PM - 12:00 AM", "Fri-Sun: 5:00 PM - 1:00 AM", "Monday: Open", "(only for today)", "Christmas & New Year's hours may vary"],
+      highlight: "Monday: Open",
+      subNote: "(only for today)",
     },
     {
       icon: Phone,
@@ -77,6 +78,8 @@ const ContactSection = () => {
                       className={`text-base md:text-lg font-light break-words ${
                         card.highlight && detail === card.highlight 
                           ? "text-gold font-medium mt-1" 
+                          : detail === card.subNote
+                          ? "text-muted-foreground italic text-sm"
                           : "text-muted-foreground"
                       }`}
                     >
