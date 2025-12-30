@@ -108,8 +108,11 @@ const Footer = () => {
                 </li>
                 <li>
                   <p className="text-foreground font-medium">Monday</p>
-                  <p className="text-gold">Open</p>
-                  <p className="text-muted-foreground italic text-xs">(only for today)</p>
+                  <p className="text-muted-foreground">Closed</p>
+                </li>
+                <li>
+                  <p className="text-gold font-medium">Wed 31st Dec</p>
+                  <p className="text-muted-foreground">4:00 PM - 2:00 AM</p>
                 </li>
                 <li>
                   <p className="text-muted-foreground italic text-xs">Christmas & New Year's hours may vary</p>
