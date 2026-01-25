@@ -108,7 +108,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <p className="text-gold font-medium">Mon (Australia Day)</p>
-                  <p className="text-muted-foreground">12:00 PM - 4:00 PM</p>
+                  <p className="text-muted-foreground">4:00 PM - 12:00 AM</p>
                 </li>
                 <li>
                   <p className="text-muted-foreground italic text-xs">Hours may differ</p>
