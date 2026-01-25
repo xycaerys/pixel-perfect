@@ -6,8 +6,8 @@ const ContactSection = () => {
     {
       icon: Clock,
       title: "Opening Hours",
-      details: ["Tue-Thu: 4:00 PM - 12:00 AM", "Fri-Sun: 5:00 PM - 1:00 AM", "Mon (Australia Day): 12 PM - 4 PM", "Hours may differ"],
-      highlight: "Mon (Australia Day): 12 PM - 4 PM",
+      details: ["Tue-Thu: 4:00 PM - 12:00 AM", "Fri-Sun: 5:00 PM - 1:00 AM", "Mon (Australia Day): 4 PM - 12 AM", "Hours may differ"],
+      highlight: "Mon (Australia Day): 4 PM - 12 AM",
     },
     {
       icon: Phone,
