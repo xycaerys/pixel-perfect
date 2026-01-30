@@ -6,8 +6,7 @@ const ContactSection = () => {
     {
       icon: Clock,
       title: "Opening Hours",
-      details: ["Tue-Thu: 4:00 PM - 12:00 AM", "Fri-Sun: 5:00 PM - 1:00 AM", "Mon (Australia Day): 4 PM - 12 AM", "Hours may differ"],
-      highlight: "Mon (Australia Day): 4 PM - 12 AM",
+      details: ["Tue-Thu: 4:00 PM - 12:00 AM", "Fri-Sun: 5:00 PM - 1:00 AM", "Monday: Closed", "Hours may differ"],
     },
     {
       icon: Phone,
@@ -74,11 +73,7 @@ const ContactSection = () => {
                   ) : (
                     <p 
                       key={detailIndex} 
-                      className={`text-base md:text-lg font-light break-words ${
-                        card.highlight && detail === card.highlight 
-                          ? "text-gold font-medium mt-1" 
-                          : "text-muted-foreground"
-                      }`}
+                      className="text-base md:text-lg font-light break-words text-muted-foreground"
                     >
                       {detail}
                     </p>
