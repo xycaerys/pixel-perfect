@@ -78,14 +78,14 @@ const Menu = () => {
     {
       image: chickenMandiPlate,
       title: "Chicken Mandi Plate",
-      description: "(Serves 1-2 Person) Comes With Rice, Half Chicken, Sauces And Salad",
+      description: "(Serves 2 Person) Comes With Rice, Half Chicken, Sauces And Salad",
       price: "$32",
       rating: 5,
     },
     {
       image: muttonMandiPlate,
       title: "Mutton Mandi Plate",
-      description: "(Serves 1-2 Person) Comes With Rice, 1 Lamb Shank, 1 Mutton Piece, Sauces And Salad",
+      description: "(Serves 2 Person) Comes With Rice, 1 Lamb Shank, 1 Mutton Piece, Sauces And Salad",
       price: "$35",
       rating: 4.9,
     },
@@ -114,7 +114,7 @@ const Menu = () => {
       image: chicken65Mandi,
       title: "Chicken 65 Mandi Plate",
       description: "(Serves 2 Person) Comes With Rice, Chicken 65, Sauces And Salad",
-      price: "$32",
+      price: "$35",
       rating: 4.9,
     },
   ];
@@ -224,7 +224,7 @@ const Menu = () => {
         
         <MenuSection 
           title="Plates" 
-          subtitle="Generous portions for 1-2 persons" 
+          subtitle="Generous portions for 2 persons" 
           items={plates} 
         />
         
