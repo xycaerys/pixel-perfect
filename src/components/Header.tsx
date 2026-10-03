@@ -32,7 +32,6 @@ const Header = () => {
   const navLinks = [
     { label: "Menu", id: "menu" },
     { label: "Extras", id: "extras" },
-    { label: "Testimonials", id: "testimonials" },
     { label: "Contact", id: "contact" },
   ];
 
