@@ -37,21 +37,13 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         />
-        <motion.div 
-          className="inline-block mb-6 px-5 py-1.5 border border-gold/40 rounded-full"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <p className="text-gold text-sm font-medium tracking-[0.15em]">AUTHENTIC ARABIAN CUISINE</p>
-        </motion.div>
         <motion.h1 
           className="font-serif text-[clamp(3rem,8vw,5rem)] font-bold mb-2 leading-[1.1] text-foreground royal-text-shadow"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
         >
-          Welcome to<br />
+          <span className="block font-script font-normal text-[clamp(3.75rem,11vw,6.5rem)] leading-[1.15] mb-1">Welcome to</span>
           <span className="text-gold gold-shimmer drop-shadow-[0_0_15px_hsl(42_62%_58%_/_0.5)]">MANDI HOUSE</span>
         </motion.h1>
         <motion.p

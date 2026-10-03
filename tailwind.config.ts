@@ -67,6 +67,7 @@ export default {
       fontFamily: {
         serif: ["Cormorant Garamond", "serif"],
         sans: ["Outfit", "sans-serif"],
+        script: ["Great Vibes", "cursive"],
       },
       borderRadius: {
         lg: "var(--radius)",
