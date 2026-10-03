@@ -7,6 +7,7 @@ import fishMandiSingle from "@/assets/fish-mandi-single.png";
 import chickenTikkaMandiSingle from "@/assets/chicken-tikka-mandi-single.png";
 import mixedMandiSingle from "@/assets/mixed-mandi-single.png";
 import chicken65Mandi from "@/assets/chicken-65-mandi.png";
+import chickenLollipopMandiSingle from "@/assets/chicken-lollipop-mandi-single.png";
 import chickenMandiPlate from "@/assets/chicken-mandi-plate.png";
 import muttonMandiPlate from "@/assets/mutton-mandi-plate.png";
 import fishMandiPlate from "@/assets/fish-mandi-plate.png";
@@ -62,6 +63,13 @@ const Menu = () => {
       title: "Chicken 65 Mandi Single",
       description: "(Serves 1 Person) Comes With Rice, Chicken 65, Sauces And Salad",
       price: "$25",
+      rating: 4.9,
+    },
+    {
+      image: chickenLollipopMandiSingle,
+      title: "Chicken Lollipop Mandi Single",
+      description: "(Serves 1 Person) Comes With Rice, 4 Pieces Chicken Lollipop, Sauces And Salad",
+      price: "$24",
       rating: 4.9,
     },
   ];
