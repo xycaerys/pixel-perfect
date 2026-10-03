@@ -2,6 +2,7 @@ import { Facebook, Instagram, Twitter, Mail } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo-hero.png";
 import ArabianDivider from "./ArabianDivider";
+import { mondayOpening, showMondayOpening } from "@/lib/announcement";
 
 const Footer = () => {
   return (
@@ -109,6 +110,12 @@ const Footer = () => {
                 <li>
                   <p className="text-foreground font-medium">Monday</p>
                   <p className="text-muted-foreground">Closed</p>
+                  {showMondayOpening() && (
+                    <p className="text-gold mt-1">
+                      Open this {mondayOpening.day}
+                      <span className="block">{mondayOpening.hours}</span>
+                    </p>
+                  )}
                 </li>
                 <li>
                   <p className="text-muted-foreground italic text-xs">Hours may differ</p>

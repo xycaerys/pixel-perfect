@@ -3,6 +3,7 @@ import { ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
 import logo from "@/assets/logo-hero.png";
 import ArabianDivider from "./ArabianDivider";
+import { mondayOpening, showMondayOpening } from "@/lib/announcement";
 
 const Hero = () => {
   return (
@@ -54,6 +55,17 @@ const Hero = () => {
         >
           Rockdale, Sydney
         </motion.p>
+        {showMondayOpening() && (
+          <motion.div
+            className="inline-block mb-8 px-5 py-2.5 rounded-xl border border-gold/50 bg-gold/10"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.38, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <p className="text-gold font-semibold text-base md:text-lg">We're open this <span className="whitespace-nowrap">{mondayOpening.day}</span></p>
+            <p className="text-foreground/80 text-sm font-light">{mondayOpening.hours}</p>
+          </motion.div>
+        )}
         <motion.p 
           className="font-light text-lg md:text-xl mb-10 max-w-[600px] mx-auto leading-relaxed text-muted-foreground"
           initial={{ opacity: 0, y: 20 }}
