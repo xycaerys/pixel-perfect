@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
 import { motion } from "framer-motion";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-hero.png";
 import ArabianDivider from "./ArabianDivider";
 
 const Hero = () => {
@@ -32,7 +32,7 @@ const Hero = () => {
         <motion.img 
           src={logo} 
           alt="Mandi House Logo" 
-          className="w-44 md:w-52 mx-auto mb-8 drop-shadow-[0_0_30px_hsl(42_62%_58%_/_0.3)]"
+          className="w-48 md:w-60 mx-auto mb-8 rounded-full drop-shadow-[0_0_30px_hsl(42_62%_58%_/_0.3)]"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}

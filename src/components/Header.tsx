@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Menu } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-hero.png";
 import halalLogo from "@/assets/halal-logo.png";
 import {
   Sheet,
@@ -56,7 +56,7 @@ const Header = () => {
             <img
               src={logo}
               alt="Mandi House Logo"
-              className="w-8 h-8 md:w-12 md:h-12"
+              className="w-8 h-8 md:w-12 md:h-12 rounded-full"
             />
             <span className="font-serif text-sm md:text-2xl font-semibold text-gold uppercase tracking-wider gold-shimmer drop-shadow-[0_0_10px_hsl(42_62%_58%_/_0.5)]">
               MANDI HOUSE ROCKDALE
@@ -102,7 +102,7 @@ const Header = () => {
               <SheetContent side="right" className="bg-background border-gold/20 w-[280px]">
                 <div className="flex flex-col gap-6 mt-8">
                   <div className="flex items-center gap-2 mb-4">
-                    <img src={logo} alt="Mandi House Logo" className="w-10 h-10" />
+                    <img src={logo} alt="Mandi House Logo" className="w-10 h-10 rounded-full" />
                     <span className="font-serif text-lg font-semibold text-gold">MANDI HOUSE</span>
                   </div>
                   {navLinks.map((link) => (

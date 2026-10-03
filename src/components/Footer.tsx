@@ -1,6 +1,6 @@
 import { Facebook, Instagram, Twitter, Mail } from "lucide-react";
 import { motion } from "framer-motion";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-hero.png";
 import ArabianDivider from "./ArabianDivider";
 
 const Footer = () => {
@@ -19,7 +19,7 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-10">
             {/* Brand Column */}
             <div>
-              <img src={logo} alt="Mandi House Logo" className="w-28 mb-5" />
+              <img src={logo} alt="Mandi House Logo" className="w-28 mb-5 rounded-full" />
               <p className="text-foreground font-medium mb-2">
                 Authentic Mandi Restaurant
               </p>
