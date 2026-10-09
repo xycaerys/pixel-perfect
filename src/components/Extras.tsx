@@ -22,7 +22,8 @@ const Extras = () => {
     {
       title: "EXTRA FISH",
       items: [
-        { name: "Fish 1 Piece", price: "$10" },
+        { name: "Fish 2 Pieces", price: "$10" },
+        { name: "Fish 4 Pieces", price: "$20" },
       ],
     },
     {
