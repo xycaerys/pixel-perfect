@@ -124,6 +124,13 @@ const Menu = () => {
       price: "$30",
       rating: 4.9,
     },
+    {
+      image: muttonMandiPlate,
+      title: "Double Mandi Plate",
+      description: "(Serves 2 Person) Comes With Rice, 2 Lamb Shanks, Sauces And Salad",
+      price: "$45",
+      rating: 4.9,
+    },
   ];
 
   const familyPlates = [
