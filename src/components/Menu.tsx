@@ -117,6 +117,13 @@ const Menu = () => {
       price: "$35",
       rating: 4.9,
     },
+    {
+      image: chickenLollipopMandiSingle,
+      title: "Chicken Lollipop Mandi Plate",
+      description: "(Serves 2 Person) Comes With Rice, 8 Pieces Chicken Lollipop, Sauces And Salad",
+      price: "$30",
+      rating: 4.9,
+    },
   ];
 
   const familyPlates = [
